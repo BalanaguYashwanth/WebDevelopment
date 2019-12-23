@@ -1,0 +1,27 @@
+<html>
+<head>
+<script type="text/javascript">
+
+var a=50; //Global variables
+function num()
+{
+    var a=2;//local varaibles
+    var x=5;
+    document.write("<h1>"+x+a+"<h1>");
+
+}
+
+num();
+
+document.write(a);
+document.write(x);// the local variable"x" is destroyed
+
+</script>
+
+</head>
+
+
+<body>
+</body>
+
+</html>

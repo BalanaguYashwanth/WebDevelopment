@@ -1,0 +1,41 @@
+<html>
+<head>
+<script type="text/javascript">
+
+var x=10;
+var car={
+    type : "tesla",
+    color : "red",
+    speed : "high",
+    num : function()
+    {
+        document.write(x);
+    }  
+
+}
+ car.fuel="electric";
+ //delete car.fuel; to delete it.
+document.write(car.fuel);
+
+var x=10;
+function cars(type,color,speed)
+{
+    this.type =  type,
+    this.color = color,
+    this.speed = speed,
+    this.num = function()
+    {
+        document.write(x);
+    }  
+
+}
+var  c1 = new cars("tesla","red","high");
+
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>
