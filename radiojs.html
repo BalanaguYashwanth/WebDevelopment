@@ -1,0 +1,32 @@
+<html>
+<head>
+<script type="text/javascript">
+function change()
+{
+    var str1 = document.getElementById("heading");
+    var str2 = document.getElementById("heading2");
+     
+    if(str1.checked == true)
+    {
+       alert("you selected:"+str1.value);
+    }
+    else if(str2.checked == true)
+    {
+        alert("you selected:"+str2.value);
+
+    }
+    else
+    alert("nothing you have choosed");
+}
+
+</script>
+</head>
+
+<body>
+<input type="radio" name="match" value="football" id="heading"> Football</input>
+<br>
+<input type="radio" name="match" value="volleyball" id="heading2"> Volleyball</input>
+<br>
+<button onclick="change()"> submit</button>
+</body>
+</html>
