@@ -13,9 +13,9 @@ var x = document.getElementById("mySelect").value;
 for(var d=1;d<=x;d++)
 {
     var t=document.getElementById("hee");
-    var opt = document.createElement("option");
-  opt.text = d;
-  t.add(opt);
+    var option = document.createElement("option");
+  option.text = d;
+  t.add(option);
 }
 }
 </script>
@@ -77,7 +77,7 @@ switch(document.getElementById("mySelect"))
     case "july":
     d=7;
 }
-var diff = Date.now-(new date(d,(opt.options[opt.selectedIndex].value),e.options[e.selectedIndex].value)).getTime();
+var diff = Date.now-(new date(d,(option.options[option.selectedIndex].value),e.options[e.selectedIndex].value)).getTime();
 var age_dt = new Date(diff); 
   
 var h= Math.abs(age_dt.getUTCFullYear() - 1970);
