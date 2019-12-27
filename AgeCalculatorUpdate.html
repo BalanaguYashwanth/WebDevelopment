@@ -1,0 +1,153 @@
+<html>
+<head>
+</head>
+
+<body>
+dateofBirth:
+
+
+<script language="javascript" type="text/javascript"> 
+function myfunction()
+{
+var x = document.getElementById("mySelect").value;
+for(var d=2;d<=x;d++)
+{
+    var t=document.getElementById("hee");
+    var option = document.createElement("option");
+    option.text = d;
+    t.add(option);
+}
+}
+</script>
+
+<select id="hee">
+<option >1</option>
+</select>
+
+
+<select id="mySelect" onchange="myfunction()">
+<option value=31 >jan </option>
+<option value=28 >feb </option>
+<option value=31 >march </option>
+<option value=30 >April </option>
+<option  value=31 >may </option>
+<option value=30 >june </option>
+<option  value=31 >july </option>
+</select>
+
+
+<select id="hbe">
+
+<script language="javascript" type="text/javascript"> 
+
+for(var d=1999;d<=2019;d++)
+{
+    var e = document.write("<option>"+d+"</option>");
+}
+</script>
+</select>
+
+
+
+<h1 id="chn">hai </h1>
+<h1 id="chn1">hai </h1>
+<h1 id="chn2">hai </h1>
+<h1 id="chn3">hai </h1>
+<br>
+
+PresentDate:
+
+<script language="javascript" type="text/javascript">
+function myfunctio()
+{
+var x = document.getElementById("mySelec").value;
+for(var d=2;d<=x;d++)
+{
+    var t=document.getElementById("hb1");
+    var option = document.createElement("option");
+  option.text = d;
+  t.add(option);
+}
+}
+</script>
+
+<select id="hb1">
+<option >1</option>
+</select>
+
+
+
+
+<select id="mySelec" onchange="myfunctio()">
+<option value=31>jan </option>
+<option value=28 >feb </option>
+<option value=31>march </option>
+<option value=30>April </option>
+<option  value=31>may </option>
+<option value=30>june </option>
+<option  value=31>july </option>
+</select>
+
+
+<select id="hb2">
+
+<script language="javascript" type="text/javascript"> 
+
+for(var d=1999;d<=2019;d++)
+{
+    document.write("<option>"+d+"</option>");
+}
+</script>
+</select>
+
+<button onclick="hit()"> submit </button>
+
+
+<h1 id="hn">hai </h1>
+<h1 id="hn1">hai </h1>
+<h1 id="hn2">hai </h1>
+
+</body>
+<br>
+
+
+<script type="text/javascript">
+function hit()
+{
+    
+//second data
+ var year1 = document.getElementById("hb2").value;
+ document.getElementById("hn").innerHTML = year1;
+
+var month1=document.getElementById("mySelec").selectedIndex;
+month1=month1+1;
+document.getElementById("hn1").innerHTML = month1;
+
+ var date1 = document.getElementById("hb1").value;
+ document.getElementById("hn2").innerHTML = date1;
+
+//first data
+ var year = document.getElementById("hbe").value;
+ document.getElementById("chn").innerHTML = year;
+
+var month=document.getElementById("mySelect").selectedIndex;
+month=month+1;
+document.getElementById("chn1").innerHTML = month;
+
+ var date = document.getElementById("hee").value;
+ document.getElementById("chn2").innerHTML = date;
+
+ 
+    var diff_ms =(new Date(year1,month1,date1)).getTime() - (new Date(year,month,date)).getTime();
+    var age_dt = new Date(diff_ms); 
+  
+    result= Math.abs(age_dt.getUTCFullYear() - 1970);
+ 
+ document.getElementById("chn3").innerHTML = result;
+
+
+}
+</script>
+
+
+</html>
