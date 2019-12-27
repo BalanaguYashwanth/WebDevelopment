@@ -10,7 +10,7 @@ dateofBirth:
 function myfunction()
 {
 var x = document.getElementById("mySelect").value;
-for(var d=1;d<=x;d++)
+for(var d=2;d<=x;d++)
 {
     var t=document.getElementById("hee");
     var option = document.createElement("option");
@@ -26,17 +26,17 @@ for(var d=1;d<=x;d++)
 
 
 <select id="mySelect" onchange="myfunction()">
-<option value=31>jan </option>
+<option value=31 >jan </option>
 <option value=28 >feb </option>
-<option value=31>march </option>
-<option value=30>April </option>
-<option  value=31>may </option>
-<option value=30>june </option>
-<option  value=31>july </option>
+<option value=31 >march </option>
+<option value=30 >April </option>
+<option  value=31 >may </option>
+<option value=30 >june </option>
+<option  value=31 >july </option>
 </select>
 
 
-<select>
+<select id="hbe">
 
 <script language="javascript" type="text/javascript"> 
 
@@ -49,7 +49,11 @@ for(var d=1999;d<=2019;d++)
 
 <button onclick="hit()"> submit </button>
 
-<h1 id="hlo">hai </h1>
+
+<h1 id="chn">hai </h1>
+<h1 id="chn1">hai </h1>
+<h1 id="chn2">hai </h1>
+<h1 id="chn3">hai </h1>
 </body>
 <br>
 
@@ -59,30 +63,30 @@ for(var d=1999;d<=2019;d++)
 
 function hit()
 {
+ var year = document.getElementById("hbe").value;
+ document.getElementById("chn").innerHTML = year;
 
-switch(document.getElementById("mySelect"))
-{
-    case "jan":
-    d=1;
-    case "feb":
-    d=2;
-    case "march":
-    d=3;
-    case "april":
-    d=4;
-    case "may":
-    d=5;
-    case "june":
-    d=6;
-    case "july":
-    d=7;
-}
-var diff = Date.now-(new date(d,(option.options[option.selectedIndex].value),e.options[e.selectedIndex].value)).getTime();
-var age_dt = new Date(diff); 
+var month=document.getElementById("mySelect").selectedIndex;
+month=month+1;
+document.getElementById("chn1").innerHTML = month;
+
+ var date = document.getElementById("hee").value;
+ document.getElementById("chn2").innerHTML = date;
+
+ 
+    var diff_ms = Date.now() - (new Date(year,month,date)).getTime();
+    var age_dt = new Date(diff_ms); 
   
-var h= Math.abs(age_dt.getUTCFullYear() - 1970);
-document.getElementById("hlo").innerHTML = h;
+    result= Math.abs(age_dt.getUTCFullYear() - 1970);
+ 
+ document.getElementById("chn3").innerHTML = result;
+
+
 }
+
+
+
+
 
 </script>
 
