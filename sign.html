@@ -1,0 +1,55 @@
+<html>
+<head>
+<script>
+function change()
+{
+    var username1=document.getElementById("uname1");
+    var password1=document.getElementById("pass1");
+
+   var gold="yash@gmail.com";
+    var regx = /^([a-zA-z0-9]+)@([a-zA-Z0-9]+).([a-z]{2,5})$/;
+
+    if(regx.test((username1).value))
+    {
+    localStorage.setItem('username1',username1.value);
+    localStorage.setItem('password1',password1.value);
+ 
+    var itemuser=localStorage.getItem('username1');
+    var itempass=localStorage.getItem('password1');
+
+     if(gold==itemuser )
+     {
+          return true;
+     }
+     else
+     {
+         return false;
+     }
+      
+    }
+else{
+    document.getElementById("la").style.visibility="visible";
+
+     return false;
+    }
+}
+</script>
+</head>
+<body>
+<form onsubmit="return change()" action="HelloWorld1.html">
+
+<br>
+<p > signup </p>
+<br>
+<input id="uname1" placeholder="username1">
+<label id="la" style="color:red;visibility:hidden" required> Invalid  </label>
+<br>
+<input type="password" id="pass1"  placeholder="password">
+<br>
+<p id="do">login and signup </p>
+<button>Submit</button> 
+
+</form>
+</body>
+
+</html>

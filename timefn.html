@@ -1,0 +1,29 @@
+<html>
+<head>
+<script>
+var id=0;
+function on()
+{
+   id = window.setTimeout(change,5000);
+
+}
+function off()
+{
+    window.clearTimeout(id);
+
+}
+function change()
+{
+    document.getElementById("od").innerHTML="5seconds passed";
+}
+</script>
+</head>
+<body>
+
+<button onclick="on()">start </button>
+<br>
+<h1 id="od"> time <h1>
+<br>
+<button onclick="off()">stop </button>
+</body>
+</html>
